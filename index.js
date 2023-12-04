@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-require('dotenv').config();
+const config = require('./config/config');
 
-const uri = process.env.MONGO_URI;
+const uri = config.bd_string;
 
 mongoose.connect(uri);
 
